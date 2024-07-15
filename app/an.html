@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 500px;
+            width: 600px;
+            margin: 50px auto;
+            box-shadow: 10px 10px 20px black;
+            position: relative;
+        }
+
+        .main>img {
+            height: 500px;
+            width: 600px;
+        }
+
+        .door>img {
+            height: 500px;
+            width: 300px;
+        }
+
+        .left-door>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: left;
+            transition: all 2s ease 0s;
+        }
+
+        .right-door>img {
+            /* transform: rotate(180deg); */
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: all 2s ease 0s;
+            transform-origin: right;
+        }
+
+        .main:hover>.left-door>img {
+            transform: perspective(500px) rotateY(-140deg);
+        }
+
+        .main:hover>.right-door>img {
+            transform: perspective(500px) rotateY(140deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://www.cnet.com/a/img/resize/543ca376760fa54ae2dd3dcd1ff5e5d32658c53c/hub/2014/01/23/ea62dd76-83e9-11e3-86d7-14feb5ca9861/iron-man-3-1.jpg?auto=webp&fit=crop&height=1200&width=1200"
+            alt="">
+        <div class="door left-door">
+            <img src="./door.jpg" alt="">
+        </div>
+        <div class="door right-door">
+            <img src="./door.jpg" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
